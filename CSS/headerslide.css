@@ -1,0 +1,117 @@
+#body-slide-header{
+margin-top: 0px;
+    height: 100%;
+    /* cho các item trong nó hiển thị hàng ngang */
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    /* theo chiều ngang */
+    justify-content: center;
+    /* center theo chiều dọc */
+    align-items: center;
+    width: 100%;
+  
+}
+.slider{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 3px;
+    /* khi hiển display:flex là hiển thị theo hàng ngang, những item nào ko nhìn thấy sẽ ẩn đi luôn */
+    overflow: hidden;
+}
+.slides{
+    width: 500%;
+    height: 100%;
+ 
+    /*các bức ảnh hiển thị theo hàng ngang */
+    display: flex;
+}
+
+/* ẩn mấy nút radio button đi */
+.slides input{
+    display: none;
+}
+/* bọc ngoài cái ảnh */
+.slide{
+    width: 20%;
+    transition:2s;
+}
+.slide img{
+    max-width: 100%;
+   max-height: 100%;
+}
+
+.navigation-manual{
+position: absolute;
+max-width: 100%;
+margin-top: 200px;
+display: flex;
+justify-content: center;
+margin-right: 300px;
+}
+.manual-btn{
+border:2px solid #40D3DC;
+padding: 50%;
+border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+margin-right: 450%;
+
+}
+
+/* .manual-btn:not(:last-child){
+    4 nút cách nhau
+    margin-right:100% ;  
+} */
+.manual-btn:hover{
+    background: #40D3DC;
+}
+/* nhấn cái nút thứ nhất thì cách cái slide first 0 */
+#radio1:checked ~ .first{
+    margin-left:0 ;
+}
+
+/* nhấn cái nút thứ hai thì cách cái slide first -20%(vì cái class slide có width=20% nên -20% để nó lướt qua cái đó */
+#radio2:checked ~ .first{
+    margin-left:-20% ;
+}
+#radio3:checked ~ .first{
+    margin-left:-40% ;
+}
+#radio4:checked ~ .first{
+    margin-left:-60% ;
+}
+
+/* automatic navigation */
+/* các nút mới, và nó sẽ được set để nằm vị trị chồng lên cái navigation-manual */
+.navigation-auto{  
+position: absolute;
+max-width: 100%;
+margin-top: 35%;
+display: flex;
+justify-content: center;
+margin-left: 50%;
+}
+.navigation-auto div{
+border:2px solid #40D3DC;
+padding: 50%;
+border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+margin-right: 450%;
+}
+/* .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+} */
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC ;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC ;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC ;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC ;
+}

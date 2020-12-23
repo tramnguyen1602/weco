@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đơn hàng</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="shortcut icon" href="IMAGES/LOGO_TachNen.png">
+    <script src="JS/header_footer.js" type="text/javascript" defer></script> 
+  <script src="https://kit.fontawesome.com/1249a5fa2b.js" crossorigin="anonymous"></script>
+    <script src="JS/order.js"></script>
+    <link rel="stylesheet" href="CSS/cart.css">
+   <script src="JS/quanlydonhang.js"></script>
+   <style>
+       #hienthidonhang{
+           max-width: 700px;
+           margin: 30px  auto;
+           margin-bottom: 130px;
+       }
+       .tieudetimkiem{
+            max-width: 1300px;
+            margin: 200px 100px auto auto;
+        }
+     
+        #chitietdonhang:hover{
+            cursor: pointer;
+            color: red;
+        }
+        .modal {
+    display: none;
+       position: fixed; /* Stay in place */
+       z-index: 1; /* Sit on top */
+       left: 0;
+       top: 0;
+       width: 100%; /* Full width */
+       height: 100%; /* Full height */
+       overflow: auto; /* Enable scroll if needed */
+       background-color: rgb(0,0,0); /* Fallback color */
+       background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+       padding-top: 60px;
+     }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+   </style>
+</head>
+<body>
+    <div class="tieudetimkiem">
+        <div>
+            <h1 style="text-align: center">LỊCH SỬ MUA HÀNG CỦA BẠN</h1>
+            <br>
+        </div>
+    </div>
+
+    <div id="hienthidonhang">
+        <div id="cart">
+            <!-- <table id="table"  class="cart">
+              <tr class="header-cart">
+                  <th class="item-header-cart">
+                      Mã đơn hàng
+                  </th>
+                  <th class="item-header-cart">
+                      Ngày mua hàng
+                  </th>
+                  <th class="item-header-cart">Đơn giá</th>
+                  <th class="item-header-cart">
+                      Tổng tiền
+                   </th>
+                  <th class="item-header-cart">Chi tiết</th>
+              
+              </tr>
+              <tr class="item-cart">
+                  <td class="td-item-cart">
+                      <img  src="IMAGES//BAN_WECO_CHESTER.jpg">                  
+                  </td>
+                  <td class="td-item-cart">
+                      Sách 1
+                  </td>
+                  <td class="td-item-cart">
+                      <span class="dongiacu">100000</span>
+                      100000</td>
+                  <td class="td-item-cart">
+                   <input id="soluong" min="1" max="10" type="number" value="2"/>
+                  </td>
+                  <td class="td-item-cart">
+                      <div id="chitietdonhang" onclick="xemchitiet()">Xem chi tiết</div>
+                  </td>
+              </tr>
+          </table>  -->
+       </div>
+      
+       
+       <div id="id01" class="modal">
+
+        <form class="modal-content animate" method="GET">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+            </div>
+            <div class="tieude">CHI TIẾT ĐƠN HÀNG <span id="idorder"></span></div>
+            <div class="container">
+                <div class="thongtingiaohang">
+                1. Thông tin người nhận:
+
+                </div>
+                <hr>
+                <div id="thongtingiaohang">
+                
+
+                </div>
+                <div class="thongtingiaohang">
+                    2. Chi tiết sản phẩm:
+    
+                    </div>
+                    <hr>
+                <div id="thongtindonhang"></div>
+                <div id="tongtien">
+                    
+                </div>
+               
+
+
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="IMAGES/LOGO_TachNen.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng</title>
+    <script src="JS/header_footer.js" type="text/javascript" defer></script>
+    <link href="CSS/main.css" rel="stylesheet" />
+    <link href="CSS/storestyle.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/1249a5fa2b.js" crossorigin="anonymous"></script>
+    <style>
+        #logo {
+            width: 120px;
+        }
+        
+        #storemain {
+            width: 80%;
+            height: 950px;
+            float: inline-end;
+            border: none;
+        }
+        
+        p.underline {
+            font-weight: bold;
+            font-size: 36px;
+            background-image: url(Images/underline.png);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            width: 300px;
+            color: black;
+            cursor: pointer;
+        }
+        
+        p.normal {
+            font-weight: bold;
+            font-size: 36px;
+            color: gray;
+            width: 300px;
+            cursor: pointer;
+        }
+        
+        #tabselector {
+            margin: 30px 0px;
+            list-style: none;
+            width: max-content;
+        }
+        
+        #tabselector li {
+            float: left;
+            position: relative;
+        }
+        #main{
+            max-width: 1300px;
+            margin: 200px auto;
+        }
+    </style>
+    <script>
+        function changetabHCM() {
+            mainframe = document.getElementById("storemain");
+            mainframe.setAttribute("src", "hcmstore.html");
+            hcm = document.getElementById("hcm");
+            hcm.setAttribute("class", "underline");
+            hn = document.getElementById("hn");
+            hn.setAttribute("class", "normal")
+        }
+
+        function changetabHN() {
+            mainframe = document.getElementById("storemain");
+            mainframe.setAttribute("src", "hnstore.html");
+            hn = document.getElementById("hn");
+            hn.setAttribute("class", "underline")
+            hcm = document.getElementById("hcm");
+            hcm.setAttribute("class", "normal");
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <center>
+           
+            <h1>GHÉ THĂM CHÚNG TÔI</h1>
+            <h3 style="color: black;">GIỜ HOẠT ĐỘNG</h3>
+            <p style="background-image: url(Images/underline.png);">Open at 8 a.m, close at 9 p.m</p>
+        </center>
+        <center>
+            <ul id="tabselector">
+                <li>
+                    <p id="hcm" class="underline" onclick="changetabHCM()">SÀI GÒN</p>
+                </li>
+                <li>
+                    <p id="hn" class="normal" onclick="changetabHN()">HÀ NỘI</p>
+                </li>
+            </ul>
+        </center>
+    
+        <center>
+            <iframe id="storemain" name="store" src="hcmstore.html"></iframe>
+        </center>
+    </div>
+   
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+#body-gioi-thieu{
+    max-width: 1300px;
+    margin:auto;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+    font-family: prompt;
+    margin-top: 13%;
+}
+.p-img-gt{
+    margin-top: 6%;
+    max-width: 100%;
+    max-height: 400px;
+    justify-content: center;
+   
+}
+.img-gt{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 3 dòng text head */
+.text1-gt{
+text-align: center;
+font-size: 1.5vw;
+}
+.text2-gt{
+   text-align: center; 
+   font-size: 14pt;
+   font-size: 2.5vw;
+   margin-top: 1.5%;
+}
+/* đoạn text thứ ba ở head */
+.text3-gt{
+    margin-top: 1.5%;
+    text-align: justify;
+   justify-content: center;
+    max-width: 90%;
+    margin-left: 5%;
+    font-size: 1.5vw;
+}
+
+/* dòng 2 gồm đoạn text bên trái và bức ảnh bên phải */
+.line2{
+    margin-top: 40%;
+    max-width: 90%;
+    max-height: 500px;   
+    display: flex;
+    margin-left: 5%;
+  
+}
+
+/* đoạn text bên trái */
+.half-left{
+float: left;
+max-width: 35%;
+max-height: 100%;
+
+margin-top: 15%;
+
+margin-left: 0;
+text-align: justify;
+font-size: 1.5vw;
+
+}
+/* tấm ảnh bên phải */
+.half-right{
+    float: left;
+    max-width: 70%;
+    max-height: 100%;
+    margin-left: 5%;
+
+   
+}
+.img-small{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+.line4{
+    margin-top: 5%;
+    max-width: 90%;
+    max-height: 500px;   
+    display: flex;
+    margin-left: 5%;
+    margin-bottom: 7%;
+}
+.half-left1{
+    float: left;
+    max-width: 70%;
+    max-height: 100%;    
+    margin-left: 0;
+    
+}
+.half-right1{
+    margin-top: 15%;
+    float: left;
+    max-width: 35%;
+    max-height: 100%;
+    margin-left: 5%;
+    font-family: Baskerville;
+    font-size: 4vw;
+    font-weight: bold;
+}
+.weco{
+    font-size: 2vw;
+    font-weight: normal;
+}
+.line3-gioithieu{
+margin-top: 5%;
+max-width: 1300px;
+height: 400px;
+display: flex;
+
+
+}
+.box-gioithieu{    
+    width: 25%;
+    max-height: 90%;   
+}
+.img-box-gioithieu{
+    width: 100%;
+    height: 100%;
+    min-width: 200px;   
+}
+
+.title-weco-gth{
+    font-family: prompt;
+    font-size: 1.5vw;
+    text-align: left;
+    margin-left: 1%;
+}
+
+
+
+

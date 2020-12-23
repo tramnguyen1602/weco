@@ -1,0 +1,285 @@
+
+
+
+
+	h2,
+	h5,
+	h6 {
+
+		color: #2E2E2E;
+		line-height: 1.15em;
+		margin: 0 0 0.4em 0;
+		font-family: "Playfair Display";
+		text-rendering: geometricPrecision;
+	}
+
+
+
+
+
+
+	h5 {
+		font-size: 2rem;
+	}
+
+	h6 {
+		font-size: 2rem;
+	}
+
+
+
+	/* Creates a responsive wrapper that makes our content scale nicely */
+	.inner {
+		position: relative;
+		width: 80%;
+		max-width: 710px;
+		margin: 0 auto;
+	}
+
+	/* Centres vertically yo. (IE8+) */
+	.vertical {
+		display: table-cell;
+		vertical-align: middle;
+		background: rgba(0, 0, 0, 0.2);
+	}
+
+	/* Wraps the main content & footer */
+
+
+	/* ========================================================================== 4. General - The main styles for the the theme ========================================================================== */
+	.content {
+		width: 85%;
+		margin: 0px auto;
+		background: #fff;
+		padding: 40px 0px;
+		margin-top: -100px;
+		position: relative;
+		border-left: 1px solid rgba(0, 0, 0, 0.08);
+		border-right: 1px solid rgba(0, 0, 0, 0.08);
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	/* Big cover image on the home page */
+	.main-header {
+		position: relative;
+		display: table;
+		width: 100%;
+		height: 100vh;
+		margin-bottom: 5rem;
+		text-align: center;
+		background: #222 no-repeat center center;
+		background-image: url(../img/default.jpg);
+		background-size: cover;
+		overflow: hidden;
+	}
+
+	.main-header .inner {
+		width: 80%;
+		margin-top: -64px;
+	}
+
+	.main-header-content.inner h1,
+	.main-header-content.inner .post-meta,
+	.main-header-content.inner .post-meta a {
+		color: #fff;
+	}
+
+
+a{
+	color: #1D1D1D;
+}
+
+	/* The details of your blog. Defined in ghost/settings/ */
+	.page-title {
+		margin: 10px 0 0px 0;
+		font-size: 3.5rem;
+		letter-spacing: -1px;
+		font-weight: 700;
+		font-family: "Playfair Display";
+		color: #fff;
+		font-style: italic;
+	}
+
+	.page-description {
+		margin: 0;
+		font-size: 3rem;
+		line-height: 1.5em;
+		font-weight: 300;
+		font-style: italic;
+		letter-spacing: 0.01rem;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+
+	/* Every post,on every page,gets this style on its <article>tag */
+	.post {
+		position: relative;
+		border-bottom: #EBF2F6 1px solid;
+		padding-bottom: 30px;
+		word-wrap: break-word;
+	}
+
+	.grid-item .post {
+		position: relative;
+		border: #EBF2F6 1px solid;
+		word-wrap: break-word;
+		margin-bottom: 20px;
+		padding-bottom: 0;
+		max-width: 100%;
+		transition: all 0.4s;
+		background: #fff;
+		overflow: hidden;
+	}
+
+	.grid-item .post img {
+		margin-bottom: -10px;
+	}
+
+	.wrapgriditem {
+		padding: 30px;
+		position: relative;
+		background-color: #fff;
+	}
+
+	.grid-item .post.featured .wrapgriditem {
+		background: #f7faf9;
+		box-shadow: none;
+	}
+
+	/* Add a little circle in the middle of the border-bottom on our .post just for the lolz and stylepoints. */
+
+	body:not(.post-template) .post-title {
+		font-size: 2.5rem;
+		font-style: italic;
+		line-height: 1.2;
+	}
+
+	.post-title a {
+		text-decoration: none;
+	}
+
+
+
+
+	/* ========================================================================== Animations should be the last thing here. Do not add stuff below this point,or it will probably everything up. ========================================================================== */
+	.btn-more {
+		padding: 3px;
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		display: table;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+
+	.btn-more span {
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		padding: 10px 30px;
+		color: #FFF;
+		display: block;
+		font-size: 16px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+
+	a.btn-more {
+		text-decoration: none;
+	}
+
+	.grid {
+		margin-left: 2.5%;
+		margin-right: 2%;
+	}
+
+	.grid-item {
+		width: 32.00%;
+	}
+
+	.entry-title-divider {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 auto;
+		margin-top: 15px;
+		margin-bottom: 7px;
+		height: 5px;
+	}
+
+	.entry-title-divider:before,
+	.entry-title-divider:after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		width: 40px;
+		height: 1px;
+		background-color: #f4f4f4;
+	}
+
+	.entry-title-divider:before {
+		left: -48px;
+	}
+
+	.entry-title-divider:after {
+		right: -48px;
+	}
+
+	.entry-title-divider span {
+		display: inline-block;
+		vertical-align: top;
+		width: 5px;
+		height: 5px;
+		margin: 0 3px;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.entry-title-divider span {
+		background-color: #fff;
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	.grid-item img {
+		transition: transform 0.5s linear;
+	}
+
+	.grid-item img:hover {
+		transform: scale(1.2);
+		animation: 10s ease 0s normal none infinite scale;
+	}
+
+	.back-top {
+		position: absolute;
+		z-index: 5;
+		top: 0px;
+		left: 50%;
+		margin-left: -12.5px;
+		display: block;
+		width: 25px;
+		height: 25px;
+		background: url(../img/top.png) no-repeat center center;
+	}
+
+	footer.site-footer:after {
+		bottom: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(17, 17, 17, 0);
+		border-bottom-color: #1D1D1D;
+		border-width: 30px;
+		margin-left: -30px;
+	}
+
+	.wrapshadow {
+		position: absolute;
+		top: 0;
+		left: -34px;
+		max-width: 200%;
+		zoom: 1;
+		width: 1214px;
+	}

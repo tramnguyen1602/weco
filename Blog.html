@@ -1,0 +1,289 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Blog WECO</title>
+    <script src="https://kit.fontawesome.com/1249a5fa2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/main.css">
+    <script src="JS/header_footer.js" type="text/javascript" defer></script> 
+    <link rel="shortcut icon" href="IMAGES/LOGO_TachNen.png">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+    :root {
+        --d: 700ms;
+        --e: cubic-bezier(0.19, 1, 0.22, 1);
+        --font-sans: "Rubik", sans-serif;
+        --font-serif: "Cardo", serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+  
+    /* body {
+        display: grid;
+        place-items: center;
+    } */
+
+    .page-content {
+        display: grid;
+        grid-gap: 1rem;
+        padding: 1rem;
+        max-width: 1024px;
+        margin: 0 auto;
+        font-family: var(--font-sans);
+    }
+
+  
+
+    .card {
+        position: relative;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: end;
+        align-items: flex-end;
+        overflow: hidden;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+        background-color: whitesmoke;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 600px) {
+        .card {
+         height:500px;
+        }
+    }
+
+    .card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        background-size: cover;
+        background-position: 0 0;
+        -webkit-transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
+        transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
+        transition: transform calc(var(--d) * 1.5) var(--e);
+        transition: transform calc(var(--d) * 1.5) var(--e), -webkit-transform calc(var(--d) * 1.5) var(--e);
+        pointer-events: none;
+    }
+
+    .card:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        pointer-events: none;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(11.7%, rgba(0, 0, 0, 0.009)), color-stop(22.1%, rgba(0, 0, 0, 0.034)), color-stop(31.2%, rgba(0, 0, 0, 0.072)), color-stop(39.4%, rgba(0, 0, 0, 0.123)), color-stop(46.6%, rgba(0, 0, 0, 0.182)), color-stop(53.1%, rgba(0, 0, 0, 0.249)), color-stop(58.9%, rgba(0, 0, 0, 0.32)), color-stop(64.3%, rgba(0, 0, 0, 0.394)), color-stop(69.3%, rgba(0, 0, 0, 0.468)), color-stop(74.1%, rgba(0, 0, 0, 0.54)), color-stop(78.8%, rgba(0, 0, 0, 0.607)), color-stop(83.6%, rgba(0, 0, 0, 0.668)), color-stop(88.7%, rgba(0, 0, 0, 0.721)), color-stop(94.1%, rgba(0, 0, 0, 0.762)), to(rgba(0, 0, 0, 0.79)));
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: -webkit-transform calc(var(--d) * 2) var(--e);
+        transition: -webkit-transform calc(var(--d) * 2) var(--e);
+        transition: transform calc(var(--d) * 2) var(--e);
+        transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
+    }
+
+    .card:nth-child(1):before {
+        background-image:url(IMAGES/bg1.jpg);
+    }
+
+    .card:nth-child(2):before {
+        background-image: url(IMAGES/bg2.jpg)
+    }
+
+    .card:nth-child(3):before {
+        background-image: url(IMAGES/bg3.jpg)
+    }
+
+    .card:nth-child(4):before {
+        background-image: url(IMAGES/bg4.jpg)
+    }
+
+    .content {
+        position: relative;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        -webkit-transition: -webkit-transform var(--d) var(--e);
+        transition: -webkit-transform var(--d) var(--e);
+        transition: transform var(--d) var(--e);
+        transition: transform var(--d) var(--e), -webkit-transform var(--d) var(--e);
+        z-index: 1;
+    }
+
+        .content > * + * {
+            margin-top: 1rem;
+        }
+
+    .title {
+        font-size: 20 px;
+        font-weight: bold;
+     
+    }
+
+    .demo {
+        font-family: var(--font-serif);
+        font-size: 1.125rem;
+        font-style: italic;
+        line-height: 1.35;
+    }
+
+    .btn {
+        cursor: pointer;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.65rem;
+        font-weight: bold;
+        letter-spacing: 0.025rem;
+        text-transform: uppercase;
+        color: white;
+        background-color: black;
+        border: none;
+    }
+
+        .btn:hover {
+            background-color: #0d0d0d;
+        }
+
+        .btn:focus {
+            outline: 1px dashed yellow;
+            outline-offset: 3px;
+        }
+
+    @media (hover: hover) and (min-width: 600px) {
+        .card:after {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        .content {
+            -webkit-transform: translateY(calc(100% - 4.5rem));
+            transform: translateY(calc(100% - 4.5rem));
+        }
+
+            .content > *:not(.title) {
+                opacity: 0;
+                -webkit-transform: translateY(1rem);
+                transform: translateY(1rem);
+                -webkit-transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+                transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+                transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+                transition: transform var(--d) var(--e), opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+            }
+
+        .card:hover,
+        .card:focus-within {
+            -webkit-box-align: center;
+            align-items: center;
+        }
+
+            .card:hover:before,
+            .card:focus-within:before {
+                -webkit-transform: translateY(-4%);
+                transform: translateY(-4%);
+            }
+
+            .card:hover:after,
+            .card:focus-within:after {
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+
+            .card:hover .content,
+            .card:focus-within .content {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+                .card:hover .content > *:not(.title),
+                .card:focus-within .content > *:not(.title) {
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                    transform: translateY(0);
+                    -webkit-transition-delay: calc(var(--d) / 8);
+                    transition-delay: calc(var(--d) / 8);
+                }
+                
+
+              
+    }
+    .tieudetimkiem{
+            max-width: 1300px;
+            margin: 150px 100px auto auto;
+        }
+        #main{
+            margin: 200px auto;
+        }
+</style>
+<body>
+    <div id="main">
+        <div class="tieudetimkiem">
+            <div>
+                <h1 style="text-align: center">CẢM HỨNG WECO</h1>
+                <br>
+            </div>
+        </div>
+
+        <main class="page-content">
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">WEDO TIPS: 4 LÝ DO NÊN LÀM VIỆC VỚI MỘT ĐƠN VỊ THIẾT KẾ NỘI THẤT</h2>
+                    <p class="demo">
+                        Việc làm mới không gian nội thất của ngôi nhà có thể thay đổi cuộc sống của bạn, tinh thần làm việc và sự sáng tạo của tất cả thành viên. Và tất nhiên, cũng chiếm khá nhiều thời gian, chi phí và công sức.
+    
+                        Nếu bạn đang lên kế hoạch cải tạo ngôi nhà của mình và không biết có nên "sử dụng quyền trợ giúp" từ một đội ngũ thiết kế nội thất chuyên biệt thì đây là ...
+                    </p>
+                    <a class="btn" href="lydonenlamviec.html"> xem thêm</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">
+                        Top 5 xu hướng thiết kế nội thất nổi bật trong năm 2020 - 2021
+                    </h2>
+                    <p class="demo">
+                        Bạn có nghĩ chìa khóa của việc thiết kế nội thất căn hộ chỉ nằm ở những thứ đắt tiền, sang trọng như đồ nội thất Ý, đèn chùm thời cổ, tranh của các họa sĩ nổi tiếng không? Trong thực tế, ngay cả các yếu tố tinh vi nhất của trang trí đều sẽ chỉ phát huy được hết khả năng nếu chúng được xếp thành một bố cục nội thất hài hòa.
+    
+                        Vậy trong năm tới, lĩnh vực thiết kế nội thất sẽ đi theo ...
+                    </p>
+                    <a class="btn"href="top5xuhuong.html"> xem thêm</a>
+    
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Mẹo trang trí phòng khách đẹp với ngân sách thấp</h2>
+                    <p class="demo">Phòng khách là khu vực chính của căn nhà. Đó là nơi bạn dành phần lớn thời gian trong ngày để quây quần với gia đình, tiếp khách, xem TV, thư giãn, v.v… Điều đó có nghĩa rằng bạn muốn nội thất phòng khách đẹp nhất có thể. Nếu bạn không hài lòng với phòng khách hiện tại của mình, thì chỉ với một số thủ thuật đơn giản sau đây...</p>
+                    <button class="btn">XEM THÊM</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Những điều cần biết khi chọn mua tủ quần áo</h2>
+                    <p class="demo">Tủ quần áo là nơi cất giữ quần áo và các vật dụng sinh hoạt cá nhân. Chúng là vật dụng không thể thiếu trong không gian nội thất phòng ngủ và không thể tách rời với mỗi gia đình. Mỗi gia đình có thể chọn mua một chiếc tủ quần áo với những màu sắc, kiểu dáng và chất liệu khác nhau tùy theo nhu cầu, sở thích và điều kiện kinh tế. Tuy nhiên, việc chọn một chiếc tủ quần áo phù hợp ...</p>
+                    <button class="btn">XEM THÊM</button>
+                </div>
+            </div>
+        </main>
+    </div>
+  
+</body>
+</html>

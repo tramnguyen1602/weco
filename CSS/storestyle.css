@@ -1,0 +1,88 @@
+.infor {
+    width: 45%;
+    float: left;
+    margin: 5px;
+    height: 450px;
+}
+
+.address {
+    width: 50%;
+    float: right;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+img {
+    width: 350px;
+    height: 350px;
+}
+
+#picture {
+    height: 350px;
+    width: 100%;
+    margin: 0;
+    float: right;
+    margin-top: 20px;
+}
+
+.slide-wrapper {
+    width: 2520px;
+    height: 350px;
+}
+
+#wrapper {
+    transition-duration: 2s;
+}
+
+.slide {
+    float: left;
+    padding-right: 10px;
+    height: 350px;
+    width: 350px;
+}
+
+#slidebuttonright {
+    width: 10%;
+    float: right;
+    height: 350px;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+#slideshow {
+    overflow: hidden;
+    height: 350px;
+    width: 80%;
+    margin: 30px 0px;
+    float: left;
+    text-align: center;
+}
+
+#slidebuttonleft {
+    width: 10%;
+    height: 350px;
+    float: left;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}

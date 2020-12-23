@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="shortcut icon" href="IMAGES/LOGO_TachNen.png">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/product.css">
+    <script src="JS/header_footer.js" type="text/javascript" defer></script> 
+  <script src="https://kit.fontawesome.com/1249a5fa2b.js" crossorigin="anonymous"></script>
+    <script src="JS/product.js"></script>
+    <script src="JS/addcart.js"></script>
+    <script src="JS/cart.js"></script>
+    <link rel="stylesheet" href="CSS/cart.css">
+    <script src="JS/showcart.js"></script>
+   <script src="JS/order.js"></script>
+   <style>
+       #main{
+           margin: 200px auto;
+       }
+    
+        .inputsoluong {
+  width: 10%;
+  padding: 2px 2px;
+  margin: 1px 0;
+  /* display: inline-block; */
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 5px 5px;
+  
+}
+.plus{
+    padding: 5pt;
+}
+.plus:hover{
+    cursor: pointer;
+
+    padding: 5pt;
+
+
+}
+.iconsoluong:hover{
+    color: red;
+}
+   </style>
+</head>
+<body>
+
+    <div id="main">
+        <div class="tieudetimkiem">
+            <div>
+                <h1 style="text-align: center">GIỎ HÀNG WECO</h1>
+                <br>
+            </div>
+        </div>
+
+
+       
+        <div id="cart">
+            <table id="table"  class="cart">
+              <tr class="header-cart">
+                  <th class="item-header-cart">
+                      Hình ảnh
+                  </th>
+                  <th class="item-header-cart">
+                      Sản phẩm
+                  </th>
+                  <th class="item-header-cart">Đơn giá</th>
+                  <th class="item-header-cart">
+                      Số lượng
+                   </th>
+                  <th class="item-header-cart">Thành tiền</th>
+                  <th class="item-header-cart">Thao tác</th>
+              </tr>
+              <tr class="item-cart">
+                  <td class="td-item-cart">
+                      <img  src="IMAGES//BAN_WECO_CHESTER.jpg">                  
+                  </td>
+                  <td class="td-item-cart">
+                      Sách 1
+                  </td>
+                  <td class="td-item-cart">
+                      <span class="dongiacu">100000</span>
+                      100000</td>
+                  <td class="td-item-cart">
+                   
+                  </td>
+                  <td class="td-item-cart">200000</td>
+                  <td class="td-item-cart">
+                    <i class="icon-cart fas fa-trash-alt"></i>
+                  </td>
+              </tr>
+          </table> 
+       </div>
+       
+       <div id="total">
+
+          
+       </div>
+      
+       
+       <div class="btndathang">
+        <button id="btndathang" class="snip1582" type="button" onclick="document.getElementById('id01').style.display='block'">Tiến hành đặt hàng</button>
+       </div>
+
+       <div class="tiep">
+        <a href="sanpham.html" class="tieptuc">  Tiếp tục mua sắm ></a>
+      
+    </div>
+       <div id="id01" class="modal">
+
+        <form class="modal-content animate" method="GET">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+            </div>
+            <div class="tieude">NHẬP THÔNG TIN THANH TOÁN</div>
+           
+
+            <div class="container">
+                <label for="uname"><b>Họ và tên <span class="batbuoc"> (*)</span></b></label>
+                <input class="input" type="text" id="txtTen" placeholder="Nhập họ và tên" name="uname" required >
+
+                <label for="psw"><b>Số điện thoại <span class="batbuoc"> (*)</span></b></label>
+                <input  class="input" id="txtSDT" type="text" placeholder="Nhập số điện thoại" name="psw" required >
+                <label for="uname"><b>Địa chỉ <span class="batbuoc"> (*)</span></b></label>
+                <input  class="input" id="txtDiachi" type="text" placeholder="Nhập địa chỉ" name="uname" required >
+
+                <label for="psw"><b>Email <span class="batbuoc"> (*)</span></b></label>
+                <input  class="input" id="txtEmail" type="text" placeholder="Nhập Email" name="psw" required >
+
+                <button class="btnthanhtoan" type="submit"  id="btnthanhtoan" onclick="thanhtoan()" >Thanh toán</button>
+
+            </div>
+        </form>
+    </div>
+ 
+</body>
+    </div>
+   <script>
+
+
+//thực hiện chức năng thanh toán
+
+
+
+ 
+
+    //   '                      <input id="soluong" min="1" max="10" type="number" value="'+nowItemcart.soluong+'"/>  '  + 
+
+   
+   </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>HCM</title>
+    <link href="CSS/storestyle.css" rel="stylesheet" />
+    <style>
+
+    </style>
+    <script>
+        function moveForward() {
+            wrapper = document.getElementById("wrapper");
+            mg = wrapper.getAttribute('vi_tri');
+            mgLeft = "0px";
+            if (mg == 0) {
+                mgLeft = "-360px";
+                mg++;
+            } else if (mg == 1) {
+                mgLeft = "-720px";
+                mg++;
+            } else if (mg == 2) {
+                mgLeft = "-1080px";
+                mg++;
+            } else {
+                mg = 0;
+            }
+            wrapper.style.marginLeft = mgLeft;
+            wrapper.setAttribute('vi_tri', mg);
+        }
+
+        function moveBackward() {
+            wrapper = document.getElementById("wrapper");
+            mg = wrapper.getAttribute('vi_tri');
+            mgLeft = "0px";
+            if (mg == 0) {
+                mgLeft = "-1080px";
+                mg = 3;
+            } else if (mg == 1) {
+                mgLeft = "0px";
+                mg--;
+            } else if (mg == 2) {
+                mgLeft = "-360px";
+                mg--;
+            } else if (mg == 3) {
+                mgLeft = "-720px";
+                mg--;
+            }
+
+            wrapper.style.marginLeft = mgLeft;
+            wrapper.setAttribute('vi_tri', mg);
+        }
+
+    </script>
+    <style>
+        p, li {
+            font-size:  20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="infor">
+            <h4>CỬA HÀNG</h4>
+            <h2>WECO STORE AT HO CHI MINH CITY</h2>
+            <p>
+                Showroom nội thất tại thành phố Hồ Chí Minh được trưng bày theo nhiều phong cách với từng chi tiết được bài trí tỉ mỉ, từ nội thất, ánh sáng đến mùi hương. Các sản phẩm trưng bày tại Showroom luôn đảm bảo tính thẩm mỹ, chất lượng theo tiêu chuẩn châu
+                Âu.
+            </p>
+            <ul>
+                <li>Tel:(037).154.9947</li>
+                <li>Email: wecohcm@gmail.com</li>
+                <li>Address: 669 QL1A, khu phố 3, Thủ Đức, Thành phố Hồ Chí Minh</li>
+            </ul>
+        </div>
+        <div class="address" id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15672.87647186219!2d106.76952198196216!3d10.870931976724478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175277dbf11a271%3A0x4567e34b99494e3f!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIHThur8gLSBMdeG6rXQgLSDEkOG6oWkgSOG7jWMgUXXhu5FjIEdpYSBUaMOgbmggUGjhu5EgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1607590512940!5m2!1svi!2s"
+                allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+
+
+    <div id="picture">
+        <div id="slidebuttonleft">
+            <img src="IMAGES/back.jpg" class="icon" onclick="moveBackward()" />
+        </div>
+
+        <div id="slideshow">
+            <div class="slide-wrapper" id="wrapper" vi_tri="0">
+                <div class="slide"><img src="IMAGES/HCM1.jpg"></div>
+                <div class="slide"><img src="IMAGES/HCM2.jpg"></div>
+                <div class="slide"><img src="IMAGES/HCM3.jpg"></div>
+                <div class="slide"><img src="IMAGES/HCM4.jpg"></div>
+                <div class="slide"><img src="IMAGES/HCM5.jpg"></div>
+                <div class="slide"><img src="IMAGES/HCM1.jpg"></div>
+                <div class="slide"><img src="IMAGES/HCM2.jpg"></div>
+            </div>
+        </div>
+        <div id="slidebuttonright">
+            <img src="IMAGES/forward.jpg" class="icon" onclick="moveForward()" />
+        </div>
+    </div>
+    <div id="rs"></div>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1249a5fa2b.js" crossorigin="anonymous"></script>
+    <title>Document</title>\
+    <style type="text/css">
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    main{           
+        margin-left: 50px;
+        margin-right: 50px;
+        overflow: hidden;
+        position: relative;
+    }
+    h1{
+               
+        font-family: prompt;
+        font-weight: normal;    
+        color: orange;
+        margin-left: 100px;
+    }
+    /* hai cái nút */
+    span{
+        position: absolute;
+        top: 50%;
+        font-size: 35px;
+        font-weight: bold;
+        color: #f5f5ef;
+        cursor: pointer;
+        left:1% ;
+
+        /* đưa nó lên front */
+        z-index: 1;
+        opacity: 90%;  
+        transition: 0.5s;   
+    }
+
+    /* ảnh của hai cái nút */
+    i{
+        /* đổ bóng */
+        text-shadow: -5px 5px 10px #8d8d58;
+    }
+    /* Cái nút bên phải */
+    span:nth-of-type(2){
+        left:  96%;
+        text-align: right;
+       
+    }
+    span:hover{
+    color: orange;
+    transition: 0.5s;
+    }
+
+    /* vùng bao hàng ngang */
+    section{
+     
+       max-height: 500px;  
+        display: flex;
+        justify-content: left;
+        overflow-x: hidden;       
+     
+        max-width: 1060px;
+        margin:auto;        
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        
+        
+        
+    }
+    section::-webkit-scrollbar{
+        visibility: hidden;
+    }
+
+    /* một ô gồm ảnh, tên, nội dung */
+    .box{
+       max-width: 300px;
+       max-height: 500px;
+        position: relative;
+        text-align: left;
+
+        /* nhận hiệu ứng từ lần đầu tiên */
+       left: 0;
+        transition: 1s;
+        
+       
+    }
+    img{
+        width: 250px;
+        height: 250px;
+        border-radius: 5px;
+
+    }
+    /* tên của khách hàng */
+    .name{
+        font-family: prompt;
+        color: orange;
+    }
+    /* nội dung feedback */
+    .content{
+        font-family: prompt;
+        
+    }
+        </style>
+</head>
+<body>
+    <main>
+        <h1>FEEDBACK CỦA CHÚNG TÔI</h1>
+        <span><i class="fas fa-chevron-circle-left"></i></span>
+        <span><i class="fas fa-chevron-circle-right"></i></span>
+        <section id="fb">
+        </section>
+    </main>
+    <script>
+        window.onload=  function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", "XML//dataFeedback.xml", true);
+            xhttp.send();
+        }
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var a="";   
+            var x = xmlDoc.getElementsByTagName("FB");
+            for (i = 0; i < x.length; i++) {          
+               a += "<div class='box'>"+
+                "<div><img src='ANH\\" + x[i].getElementsByTagName("ANHSANPHAM")[0].childNodes[0].nodeValue + "'></div>"+
+               "<div class='name'>" + 
+                x[i].getElementsByTagName("TENKHACHHANG")[0].childNodes[0].nodeValue +
+                 "</div><div class='content'>" + x[i].getElementsByTagName("NOIDUNG")[0].childNodes[0].nodeValue + 
+                "</div></div>";  
+                 }          
+            document.getElementById("fb").innerHTML =a ;
+                }
+    </script> 
+</body>
+</html>
+<script type="text/javascript">
+
+// var xmlDoc = xml.responseXML;
+          
+// var x = xmlDoc.getElementsByTagName("FB");
+var span=document.getElementsByTagName('span');
+var div=document.getElementsByTagName('div');
+var l=0;
+var j=0;
+var toado=0;
+span[1].onclick=()=>{
+    l++;
+    for(var i of div)
+    {
+     //vì cái section rộng 1200px, mỗi lần bấm thì lướt qua 2 ảnh, và có khoảng cách giữa các ảnh là 20px nữa
+     //nên là để lướt qua 2 ảnh thì cần lùi 540px
+        if(l==0){i.style.left="0px";}
+        // if(l==1){i.style.left="-540px";}
+        // if(l==2){i.style.left="-1080px";}
+        // if(l==3){i.style.left="-1620px";}
+        //  if(l==4){i.style.left="-2160px";}
+        if(l>0){i.style.left=String(0-540*l)+"px";}
+        if(l>=(div.length/4)/2-1){l=0;i.style.left="0px";}
+    
+//8 file feedback thì->div.length=32(có 32 cái div(vì có 3 thuộc tính+1box=4 cái div cho mỗi ô))
+//8 ô->4 lần bấm là qua hết(vì mỗi lần bấm nó chạy qua 2 ô), nhưng mình mún giữ lại 2 ô ở lần bấm cuối nên trừ 1. Xét lần bấm còn hai ô cuối cùng thì cho nó quay về ô đầu
+
+    }
+}
+span[0].onclick = ()=>{
+    l--;
+    for(var i of div)
+    {
+        if(l==0){i.style.left="0px";}
+        if(l==1){i.style.left="-540px";}
+        if(l==2){i.style.left="-1080px";}
+        if(l==3){i.style.left="-1620px";}
+        if(l>0){i.style.left=String(0-540*l)+"px";}
+        if(l<0){l=0;}
+    }
+}
+
+</script>

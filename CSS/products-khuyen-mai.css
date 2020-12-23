@@ -1,0 +1,94 @@
+  /* danh sách sản phẩm */
+  #products-khuyen-mai{
+    max-width: 1100px;
+    margin:auto;
+}
+#products-khuyen-mai .items-product{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+#products-khuyen-mai .items-product .item{
+    border:1px solid #ddd;
+    box-shadow: 1px 2px 3px #ddd;
+    padding:5px 10px;
+    border-radius: 5px;
+    
+}
+#products-khuyen-mai .items-product .item:hover{
+    box-shadow: 3px 4px 5px #ddd;
+    transform: scale(1.2);
+    /* Safari & Google Chrome */
+    -webkit-transform: scale(1.05);
+    /* Mozilla Firefox */
+    -moz-transform: scale(1.05); 
+    /* Opera */
+    -o-transform: scale(1.05);
+    /* IE 9 */
+    -ms-transform: scale(1.05);
+}
+#products-khuyen-mai .items-product .item .item-name{
+    font-size: 20px;
+    line-height: 30px;
+    margin: 10px 0px;
+
+}
+#products-khuyen-mai .items-product .item .item-price{
+    margin-bottom: 20px;
+    
+}
+#products-khuyen-mai .items-product .item .item-price-old{
+    font-size: 18px;
+    text-decoration: line-through;
+    
+    
+}
+#products-khuyen-mai .items-product .item .item-price-new{
+    font-size: 24px;
+    color:red;
+}
+
+#products-khuyen-mai .items-product .item .snip1582{
+display: block;
+margin-left: auto;
+}
+#products-khuyen-mai .items-product .item .item-photo{
+    position: relative;
+    text-align: center;
+    /* z-index: 2; */
+
+}
+#products-khuyen-mai .items-product  .item .item-discount{
+    /* z-index: 1; */
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    top:2px;
+    left:2px;
+}
+
+
+/* css button add cart */
+.snip1582 {
+    background:#1abc9c;
+    padding:10px 10px;
+    font-size:16px;
+    color:#fff;
+    font-weight: bold;
+    margin:5px;
+    border:none;
+    border-radius:10px;
+    box-shadow:0 3px gray;
+    cursor:pointer;
+    outline:none;
+}
+.snip1582:active{
+    transform:translate(0,4px);
+    box-shadow:0 2px gray;  
+}
+.snip1582:hover{
+    background:#117e68;
+}
+
+

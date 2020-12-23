@@ -1,0 +1,158 @@
+#body-fb{
+    margin-top: 0px;
+    margin-bottom: 8%;
+
+        max-height: 500px;
+        /* cho các item trong nó hiển thị hàng ngang */
+        display: flex;
+        /* theo chiều ngang */
+        justify-content: center;
+        /* center theo chiều dọc */
+
+ 
+    }
+    .section-fb{
+     
+        max-height: 500px;  
+        display: flex;
+        justify-content: left;
+        overflow-x: hidden;       
+     
+        max-width: 1060px;
+               
+        
+        
+    }
+    .section-fb::-webkit-scrollbar{
+        visibility: hidden;
+    }
+    #box{
+    
+        max-width: 100%;
+        max-height: 500px;
+       
+        text-align: center;
+        display: flex;
+         /* nhận hiệu ứng từ lần đầu tiên */
+        left: 0;
+        transition: 1s;
+        position: relative;
+       
+    
+    }
+    
+    /* ẩn mấy nút radio button đi */
+    #box input{
+        display: none;
+    }
+    /* bọc ngoài cái ảnh */
+    .item-fb{
+        max-width: 270px;
+        max-height: 500px;
+        
+         text-align: left;
+     
+         /* nhận hiệu ứng từ lần đầu tiên */
+        left: 0;    
+        transition:3s;
+    }
+    .item-fb img{
+        width: 250px;
+        height: 250px;
+        margin-right: 20px;
+    }
+    
+    .navigation-manual-fb{
+    /* position: absolute;
+    width: 1060px;
+    margin-top: 350px;
+    display: flex;
+    justify-content: center; */
+    /* position: absolute; */
+max-width: 100%;
+margin-top: 50%;
+display: flex;
+justify-content: center;
+margin-left: 45%;
+    
+    }
+    .manual-btn-fb{
+        /* border:2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s; */
+    border:2px solid #40D3DC;
+padding: 5px;
+border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+margin-right: 100%;
+    
+    }
+    
+    /* .manual-btn-fb:not(:last-child){
+        4 nút cách nhau
+        margin-right:40px ;
+    } */
+    .manual-btn-fb:hover{
+        background: #40D3DC;
+    }
+    /* nhấn cái nút thứ nhất thì cách cái slide first 0 */
+    #radio-fb1:checked ~ .first-fb{
+        margin-left:0 ;
+    }
+    
+    /* nhấn cái nút thứ hai thì cách cái slide first -20%(vì cái class slide có width=20% nên -20% để nó lướt qua cái đó */
+    #radio-fb2:checked ~ .first-fb{
+        margin-left:-51% ;
+    }
+    #radio-fb3:checked ~ .first-fb{
+        margin-left:-102% ;
+    }
+    #radio-fb4:checked ~ .first-fb{
+        margin-left:-153% ;
+    }
+    
+    /* automatic navigation */
+    /* các nút mới, và nó sẽ được set để nằm vị trị chồng lên cái navigation-manual */
+    .navigation-auto-fb{
+        /* position: absolute;
+        display: flex;
+        width: 1060px;
+        justify-content: center;
+        margin-top: 350px; */
+        position: absolute;
+        max-width: 100%;
+        margin-top: 330px;
+        display: flex;
+        justify-content: center;
+        
+        margin-left: 45%;
+    }
+    .navigation-auto-fb div{
+        /* border: 2px solid #40D3DC;
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s; */
+        border:2px solid #40D3DC;
+padding: 5px;
+border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+margin-right: 100%;
+}
+    
+    /* .navigation-auto-fb div:not(:last-child){
+        margin-right: 40px;
+    } */
+    #radio-fb1:checked ~ .navigation-auto-fb .auto-btn1-fb{
+        background: #40D3DC ;
+    }
+    #radio-fb2:checked ~ .navigation-auto-fb .auto-btn2-fb{
+        background: #40D3DC ;
+    }
+    #radio-fb3:checked ~ .navigation-auto-fb .auto-btn3-fb{
+        background: #40D3DC ;
+    }
+   
