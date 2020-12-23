@@ -81,9 +81,7 @@
 i{
     cursor: pointer;
 }
-i:hover{
-    color: red;
-}
+
 .dongiacu{
   font-size: 13px;
   text-decoration: line-through;
